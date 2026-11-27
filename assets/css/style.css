@@ -1,22 +1,393 @@
+/* HTML-elementet <html> är det yttersta elementet på webbsidan.
+   min-height: 100% gör att HTML-dokumentet minst fyller hela tillgängliga höjden.
+*/
+html {
+  min-height: 100%;
+}
+
+/* <body> innehåller allt synligt innehåll på webbsidan.
+   Här bestäms bland annat typsnitt, radavstånd, minsta höjd och marginaler.
+*/
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-  max-width: 40rem;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  line-height: 1.6;
-  color: #1a1a1a;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  margin: 0;
 }
 
+/*
+   BAKGRUND PÅ HELA WEBBSIDAN
+   Lägger en upprepande bakgrundsbild bakom allt innehåll. 
+   Opaciteten gör bilden svagare så att text och bilder fortfarande syns tydligt.
+*/
+
+/* ::before är ett pseudoelement som skapar ett extra innehåll före elementets vanliga innehåll.
+   Här används det för att lägga till en bakgrundsbild bakom hela webbsidan. 
+*/
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../images/7kakorbilder/bakgrund.jpg");
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 100% auto;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*
+   INNEHÅLLSSEKTIONER
+   Påverkar alla <section>-element på sidan.
+   Ger recept och andra innehållsdelar en genomskinlig beige bakgrund, rundade hörn, avstånd nedåt och en diskret skugga.
+*/
+
+/* <section> används för att dela upp webbsidans innehåll i olika självständiga sektioner. */
+section {
+  background-color: #ffe3bf88;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 100px;
+  box-shadow: 0 4px 12px rgba(99, 53, 16, 0.12);
+}
+
+/*
+   HUVUDRUBRIK OCH LOGOTYP
+   Bestämmer utseendet på sidans stora rubrik.
+   Logotypen placeras automatiskt framför rubriktexten med hjälp av ::before.
+*/
+
+/* <h1> är sidans huvudrubrik och används för den viktigaste rubriken på sidan. */
 h1 {
-  color: #2563eb;
+  color: rgb(99, 53, 16);
+  font-size: 65px;
+  text-align: center;
+  background-color: rgba(235, 178, 112, 0.705);
+  padding: 15px;
+  border-radius: 15px;
 }
 
-code {
-  background: #f1f5f9;
-  padding: 0.1rem 0.3rem;
-  border-radius: 3px;
-  font-size: 0.95em;
+h1::before {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-image: url("../images/7kakorbilder/logga.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+/*
+   UNDERRUBRIKER
+   Påverkar alla h2- och h3-rubriker.
+   h2 får en persikofärgad bakgrund och en mörk kant till vänster. h3 får en linje under rubriken för att skilja innehåll åt.
+*/
+
+/* <h2> används för underrubriker som delar upp innehållet i större delar. */
+h2 {
+  color: rgb(99, 53, 16);
+  font-size: 32px;
+  text-align: start;
+  background-color: #f39a7e;
+  padding: 15px 15px 15px 20px;
+  border-radius: 15px;
+  border-left: 7px solid #633510;
+}
+
+/* <h3> används för mindre underrubriker som delar upp innehållet ytterligare. */
+h3 {
+  color: rgb(99, 53, 16);
+  font-size: 25px;
+  border-bottom: 2px solid #d99b68;
+  padding-bottom: 8px;
+}
+
+/*
+   BRÖDTEXT OCH LISTOR
+   Bestämmer storlek och radavstånd för vanliga textstycken samt punktlistor och numrerade listor på hela webbsidan.
+*/
+
+/* <p> används för vanliga textstycken och brödtext på webbsidan. */
+p {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+/* <ul> skapar en punktlista och <ol> skapar en numrerad lista. */
+ul,
+ol {
+  font-size: 18px;
+}
+
+/* 
+   INTRODUKTIONSDELEN
+   Påverkar delen högst upp på sidan där introduktionsbilden och presentationstexten visas bredvid varandra. Flexbox placerar innehållet i en rad och gap skapar avstånd.
+   Den övre marginalen flyttar ner hela introt.
+*/
+
+/* .intro är en klass som används för att formatera introduktionsdelen på webbsidan. */
+.intro {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin: 100px 0 30px;
+}
+
+/* <figure> används för att gruppera exempelvis en bild tillsammans med eventuell bildtext. */
+.intro figure {
+  margin: 0;
+}
+
+/* <img> används för att visa bilder på webbsidan. */
+.intro figure img {
+  align-self: flex-start;
+  width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(99, 53, 16, 0.15);
+}
+
+/* .intro-text är en klass som används för att formatera introduktionens presentationstext. */
+.intro-text {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 750px;
+  margin-right: auto;
+  background-color: #f39a7e;
+  padding: 25px;
+  border-radius: 18px;
+  border-left: 7px solid #633510;
+}
+
+/* Knapp under introduktionstexten */
+/* <a> är en länk som används för att ta besökaren till en annan plats på webbsidan eller till en annan webbsida. */
+.intro-knapp {
+  display: inline-block;
+  background-color: #633510;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+/* :hover är en pseudoklass som aktiveras när besökaren håller muspekaren över ett element.
+   Här ändras knappens utseende när besökaren håller muspekaren över den. */
+/* Färg och rörelse när besökaren håller muspekaren över knappen */
+.intro-knapp:hover {
+  background-color: #f2c696;
+  color: #633510;
+  transform: translateY(-3px);
+}
+
+/*
+   NAVIGERINGSMENYN
+   Påverkar länkarna högst upp på sidan som leder besökaren till de olika recepten.
+   Flexbox centrerar knapparna och låter dem hamna på flera rader om skärmen är smal.
+*/
+
+/* <nav> används för att skapa en navigeringsmeny med länkar till olika delar av webbsidan. */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 20px 80px;
+  padding: 15px 10px 20px;
+}
+
+/* <footer> är sidfoten och innehåller information eller länkar längst ner på webbsidan. */
+/* Ger navigeringslänkarna och länken i sidfoten samma grundutseende med färg, storlek och rundade hörn. */
+nav a,
+footer a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background-color: #f39a7e;
+  color: rgb(99, 53, 16);
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+/* Ändrar navigeringsknapparnas färg när besökaren håller muspekaren över dem.
+   Knappen lyfts även lite uppåt. 
+*/
+nav a:hover {
+  background-color: rgb(99, 53, 16);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/*
+   RECEPTENS LAYOUT
+   Påverkar varje recepts bild och receptinformation. Flexbox placerar bilden bredvid texten och skapar ett mellanrum.
+*/
+
+/* .recept-layout är en klass som används för att placera receptbilden och receptinformationen bredvid varandra. */
+.recept-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 30px;
+}
+
+/* Tar bort standardmarginaler runt bilderna så att de hamnar rätt i receptlayouten. */
+.recept-layout figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Gör receptbilderna blockelement, rundar hörnen och lägger till en diskret skugga. */
+.recept-layout figure img {
+  align-self: flex-start;
+  width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(99, 53, 16, 0.15);
+}
+
+/* .recept-info är en klass som används för att formatera området med receptets information. */
+.recept-info {
+  flex: 1;
+}
+
+/*
+   RECEPTINFORMATION
+   Påverkar informationsrutor, ingredienslistor och instruktioner i varje recept.
+   Använder en varm beige färg för att skilja dessa delar från övrigt innehåll.
+*/
+
+/* .info är en klass som används för att skapa en ruta med exempelvis antal kakor och gräddningstid. */
+.info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 20px 0;
+  background-color: #f2c696;
+}
+
+/* .ingredienser är en klass som används för att formatera receptets ingredienslista. */
+.ingredienser {
+  background-color: #f2c696;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+/* <li> är ett listelement som används för varje enskild punkt i en punktlista eller numrerad lista. */
+/* Skapar lite extra mellanrum mellan ingredienserna i listan. */
+.ingredienser li {
+  padding: 4px 0;
+}
+
+/* .görsåhär är en klass som används för att formatera receptets instruktioner och tillvägagångssätt. */
+.görsåhär {
+  background-color: #f2c696;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+/* Skapar luft mellan stegen i instruktionerna. */
+.görsåhär li {
+  padding: 5px 0;
+}
+
+/* .antal är en klass som används för att placera information om exempelvis antal kakor bredvid varandra. */
+.antal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Tar bort standardmarginalen på rubriken inuti antal-rutan. */
+.antal h3 {
+  margin: 0;
+}
+
+/*
+   SIDFOT
+   Påverkar området längst ner på webbsidan.
+   Centrerar länken som tar besökaren tillbaka till sidans början.
+*/
+
+/* Centrerar sidfoten och bestämmer dess avstånd från övrigt innehåll. */
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  height: auto;
+}
+
+/* Ändrar sidfotslänkens färger när besökaren håller muspekaren över den. */
+footer a:hover {
+  background-color: rgb(99, 53, 16);
+  color: white;
+}
+
+/*
+   MOBILANPASSNING
+   Aktiveras när skärmens bredd är högst 800px.
+   Bilder, introduktion och receptinformation placeras då under varandra istället för bredvid varandra. Text och rubriker får mindre storlek för att passa mindre skärmar.
+*/
+
+/* @media används för att anpassa CSS efter olika skärmstorlekar.
+   Här aktiveras reglerna när skärmens bredd är högst 800 pixlar.
+*/
+@media (max-width: 800px) {
+
+  /* Staplar intro och receptets innehåll vertikalt på mindre skärmar. */
+  .recept-layout,
+  .intro {
+    flex-direction: column;
+  }
+
+  /* Anpassar bilderna så att de fyller tillgänglig bredd utan att förvrängas. */
+  .recept-layout figure img,
+  .intro figure img {
+    align-self: flex-start;
+    width: 500px;
+    height: auto;
+  }
+
+  /* Minskar huvudrubrikens storlek och logotypen så att de får plats på mobilen. */
+  h1 {
+    font-size: 36px;
+  }
+
+  h1::before {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Minskar avståndet ovanför introduktionen så att det inte blir för mycket tomrum. */
+  .intro {
+    margin-top: 40px;
+  }
+
+  /* Anpassar presentationstexten och navigeringsknapparna till mindre skärmar. */
+  .intro-text {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  /* Minskar marginalerna runt recepten så att mer innehåll får plats på mobilen. */
+  .recept-layout {
+    margin: 15px;
+  }
 }

@@ -1,19 +1,431 @@
 <!DOCTYPE html>
-<html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Min webbplats</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <h1>Hej världen!</h1>
-    <p>
-      Det här är din startsida. Redigera <code>index.html</code> och
-      <code>assets/css/style.css</code> för att börja bygga din webbplats.
-    </p>
 
-    <!-- Lägg dina bilder i mappen assets/images/ och visa dem så här:
-         <img src="assets/images/min-bild.jpg" alt="Beskrivning av bilden" /> -->
-  </body>
+<html lang="sv"> 
+<!--lang="sv" anger att sidans huvudspråk är svenska-->
+
+    <head>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <meta charset="UTF-8"> 
+        <!--meta charset="UTF-8" bestämmer textstorlek för normal text-->
+        <title>Sju sorters kakor</title>
+        <!--title används för att ange webbsidans titel-->
+
+    <style>
+        html {scroll-behavior: smooth;} 
+    </style>
+    <!--style bestämmer hur ett specifikt element ska se ut.-->
+    <!--scroll-behavior: smooth kapar en smidig övergång vid bläddring mellan sidorna-->
+
+    </head>
+    <!--head innehåller information om webbsidan-->
+
+<body>
+    <h1 id="kakor">Sju sorters kakor</h1>
+    <!--h1 skapar den viktigaste och största rubriken-->
+
+    <nav aria-label="kakfat">
+        <a href="#drömmar">Drömmar</a> <!--a href skapar en klickbar länk-->
+        <a href="#finskapinnar">Finska pinnar</a>
+        <a href="#hallongrottor">Hallongrottor</a>
+        <a href="#kolasnittar">Kolasnittar</a>
+        <a href="#schackrutor">Schackrutor</a>
+        <a href="#chokladkakor">Chokladkakor</a>
+        <a href="#kardemummakakor">Kardemummakakor</a>
+    </nav>
+    <!--nav aria-label skapar en navigeringsmeny och ger den ett namn-->
+
+<section>
+    <div class="intro">
+    <figure>
+        <img
+            src="assets/images/7kakorbilder/Agg.jpg"
+            alt="Ingredienser på en duk, Lauren Gray ingredients."
+            title="Ingredienser på en duk, Lauren Gray ingredients.">
+        <!--img (image) skapar en bild på en webbsida-->
+        <!--src (source) anger sökvägen till en fil-->
+        <!--alt används för att beskriva en bild om den inte kan visas-->
+        <!--title anger extra information om element när du håller musen över bilderna-->
+
+    </figure>
+    <!--figure grupperar en bild tillsammans med en eventuell bildtext-->
+
+    <div class="intro-text">
+    <!--div skapar en behållare och class ger den ett namn-->
+    
+        <p>
+            Att bjuda på sju sorters kakor är en klassisk svensk fikatradition och syftar på det minsta antalet kaksorter som etiketten tidigare föreskrev att kakfatet ska innehålla. Tanken är att erbjuda ett varierat urval av småkakor så att det finns något för olika smaker: spröda, mjuka, chokladiga, kryddiga och fruktiga kakor. Utöver småkakorna serveras även vetebröd och och tårta. Traditionen förknippas ofta med kafferep och högtider men passar lika bra till vardagsfika eller kalas och har funnits sedan 1800-talet.
+       </p>
+        <!--p (paragraph) skapar ett stycke text-->
+
+        <a href="#drömmar" class="intro-knapp">
+            På den här sidan finns recept på sju småkakor att prova på!
+        </a>
+        <!-- Länk som leder besökaren vidare till recepten -->
+
+    </div>
+    </div>
+</section>
+<!--section delar upp en webbsida i olika avsnitt-->
+
+<section id="drömmar">
+
+    <h2>Drömmar</h2>
+    <!--h2 skapar en underrubrik-->
+
+    <div class="recept-layout">
+    <figure>
+        <img 
+            src="assets/images/7kakorbilder/Drommarbild.jpg"
+            alt="Flera drömmarkakor, Pexel Nur Tok."
+            title="Flera drömmarkakor, Pexel nur tok.">
+    </figure>
+
+    <div class="recept-info">
+    <div class="info">         
+        <p>Drömmar är mycket spröda småkakor med mild vaniljsmak som är lätta att baka. Hjorthornssalt gör att kakorna får sin karakteristiskt porösa och ljuvligt frasiga konsistens.</p>
+
+    <div class="antal">
+    <h3>40-45 kakor</h3>
+    <!--h3 skapar en underrubrik på den tredje rubriknivån-->
+    </div>
+    </div>
+
+    <div class="ingredienser">
+    <h3>Ingredienser</h3>
+        <ul>
+            <li>100 g smör</li>
+            <li>3 dl strösocker</li>
+            <li>1 dl rapsolja</li>
+            <li>2 tsk vaniljsocker</li>
+            <li>1 tsk hjorthornssalt</li>
+            <li>4 dl vetemjöl</li>
+        </ul>
+        <!--ul skapar en punktlista-->
+        <!--li markera object som punk i listan-->
+    </div>
+
+    <div class="görsåhär">
+    <h3>Gör så här</h3>
+        <ol>
+            <li>Sätt ugnen på 15 °C.</li>
+            <li>Rör smör och socker mjukt.</li>
+            <li>Tillsätt oljan, lite i taget, under vispning.</li>
+            <li>Blanda vaniljsocker och hjorthornssalt med lite av mjölet och rör ned blandningen i smeten. Tillsätt sedan resten av mjölet.</li>
+            <li>Rulla små bollar av degen och lägg dem på plåtar med bakplåtspapper.</li>
+            <li>Grädda mitt i ugnen i cirka 15-20 minuter och låt kallna på plåten.</li>
+        </ol>
+        <!--ol skapar en numrerad lista-->
+
+    </div>
+    </div>
+    </div>
+</section>
+  
+
+<section id="finskapinnar">
+    <h2>Finska pinnar</h2>
+
+    <div class="recept-layout">
+    <figure>
+        <img
+            src="assets/images/7kakorbilder/Mandlar.jpg"
+            alt="Skål av mandlar, Pexels Lorena Galeano."
+            title="Skål av mandlar, Pexels Lorena Galeano.">
+    </figure>
+
+    <div class="recept-info">
+    <div class="info">   
+        <p> Finska pinnar är spröda mördegskakor med mandel och pärlsocker på toppen. Trots namnet är de en välkänd klassiker på svenska kakfat.</p>
+
+    <div class="antal">
+    <h3>40-45 kakor</h3>
+    </div>
+    </div>
+    <div class="ingredienser">
+    <h3>Ingredienser</h3>
+        <ul>
+            <li>200 g smör</li>
+            <li>1 dl strösocker</li>
+            <li>4,5 dl vetemjöl</li>
+            <li>1 tsk vaniljksocker</li>
+            <li>1 dl madelmjöl</li>
+            <li>1 äggvita</li>
+        </ul>
+    <h3>Garnering</h3>
+        <p>ca 1 dl hackad sötmandel och 2 msk pärlsocker</p>
+    </div>
+
+    <div class="görsåhär">
+    <h3>Gör så här</h3>
+        <ol>
+            <li>Sätt ugnen på 175 °C.</li>
+            <li>Blanda mandel, mjöl och socker och arbeta ihop med tärnat smör till en deg. Låt vila i kylskåp ca 30 minuter.</li>
+            <li>Dela degen i 8 delar och rulla varje del till en 30 cm lång längd.</li>
+            <li>Lägg längderna på en plåt med bakplåtspapper.</li>
+            <li>Vispa upp äggvitan lätt och pensla längderna.</li>
+            <li>Strö över hackad mandel och pärlsocker och dela längderna i ca 4 cm långa bitar. Sära bitarna lite så att de inte fastnar i varandra.</li>
+            <li>Grädda mitt i ugnen i cirka 10-12 minuter.</li>
+        </ol>
+    </div>
+    </div>
+    </div>
+</section>
+ 
+
+<section id="hallongrottor">
+    <h2>Hallongrottor</h2>
+
+    <div class="recept-layout">
+    <figure>
+        <img 
+            src="assets/images/7kakorbilder/Hallongrottorbild.jpg"
+            alt="Fat av Hallongrottor, AI-genererad."
+            title="Fat av Hallongrottor, AI-genererad.">
+    </figure>
+    
+    <div class="recept-info">
+    <div class="info">  
+        <p>Hallongrottor är mördegskakor med en liten grop fylld med ljuvlig hallonsylt. De är både enkla att baka och uppskattade på kakfatet.</p>
+
+    <div class="antal">
+    <h3>20-24 kakor</h3>
+    </div>
+    </div>
+
+    <div class="ingredienser">
+    <h3>Ingredienser</h3>
+        <ul>
+            <li>200 g smör eller margarin</li>
+            <li>1 dl strösocker</li>
+            <li>2 tsk vaniljsocker</li>
+            <li>4,5 dl vetemjöl</li>
+            <li>1 tsk bakpulver</li>
+            <li>1 dl fast hallonsylt</li>
+        </ul>
+    </div>
+
+    <div class="görsåhär">
+    <h3>Gör så här</h3>
+        <ol>
+            <li>Sätt ugnen på 200 °C.</li>
+            <li>Arbeta snabbt ihop smör, socker, vaniljsocker, vetemjöl och bakpulver till en deg. Gärna i matberedare.</li>
+            <li>Rulla degen till små bollar och lägg dem i små kakformar ca 5 cm i diameter.</li>
+            <li>Gör en grop i varje kaka med ett finger eller skaftet på en sked.</li>
+            <li>Fyll groparna med hallonsylt.</li>
+            <li>Grädda i cirka 12-15 minuter och låt sedan svalna på galler.</li>
+        </ol>
+    </div>
+    </div>
+    </div>
+</section>
+  
+
+<section id="kolasnittar">
+    <h2>Kolasnittar</h2>
+
+    <div class="recept-layout">
+    <figure>
+        <img
+
+            src="assets/images/7kakorbilder/kolasnittarbild.jpg"
+            alt="Fat av kolasnittar, AI-genererad."
+            title="Fat av kolasnittar, AI-genererad.">
+    </figure>
+
+    <div class="recept-info">
+    <div class="info">  
+        <p>Kolasnittar är avlånga lite sega småkakor med smak av sirap och vanilj. De skärs i sneda bitar direkt när de kommer ut ur ugnen.</p>
+
+    <div class="antal">
+    <h3>20 kakor</h3>
+    </div>
+    </div>
+
+    <div class="ingredienser">
+    <h3>Ingredienser</h3>
+        <ul>
+            <li>100 g smör</li>
+            <li>1 dl strösocker</li>
+            <li>2 msk mörk sirap</li>
+            <li>2,5 dl vetemjöl</li>
+            <li>1 tsk bakpulver</li>
+            <li>1 tsk vaniljsocker</li>
+        </ul>
+    </div>
+
+    <div class="görsåhär">
+    <h3>Gör så här</h3>
+        <ol>
+            <li>Sätt ugnen på 175 °C.</li>
+            <li>Rör smör, socker och sirap mjukt.</li>
+            <li>Blanda vetemjöl, bakpulver och vaniljsocker. Arbeta sedan ihop med smörsmeten till en deg.</li>
+            <li>Dela degen i två delar och rulla dem till längder ca 40 cm långa.</li>
+            <li>Lägg längderna på en plåt med bakpltåspapper och platta till dem.</li>
+            <li>Grädda mitt i ugnen cirka 12 minuter.</li>
+            <li>Låt kakorna svalna något och skär längderna i sneda bitar medan de fortfarande är varma.</li>
+        </ol>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+<section id="schackrutor">
+    <h2>Schackrutor</h2>
+    
+    <div class="recept-layout">
+    <figure>
+        <img
+            src="assets/images/7kakorbilder/Degbild.jpg"
+            alt="Någon som knådar deg, Pexels Nicole Michalou."
+            title="Någon som knådar deg, Pexels Nicole Michalou.">
+    </figure>
+
+    <div class="recept-info">
+    <div class="info">  
+        <p>Schackrutor är klassiska småkakor med ett dekorativt rutmönster av ljus och chokladsmakande mördeg. Kakorna blir spröda och ser mycket läckra ut på kakfatet. De imponerar med sitt utseende men är väldigt enkla att baka.</p>
+  
+    <div class="antal">
+    <h3>ca 50 kakor</h3>
+    </div>
+    </div>
+
+    <div class="ingredienser">
+    <h3>Ingredienser</h3>
+        <ul>
+            <li>200g osaltat smör</li>
+            <li>1 dl strösocker</li>
+            <li>4,5 dl vetemjöl</li>
+        </ul>
+    
+        <ul>
+            <li>Ljus deg: 2 tsk vaniljsocker</li>
+            <li>Mörk deg: 2 msk kakao</li>
+        </ul>
+    </div>
+
+    <div class="görsåhär">
+    <h3>Gör så här</h3>
+        <ol>
+            <li>Ta fram smöret så att det hinner bli rumsvarmt.</li>
+            <li>Vispa ihop smör och socker till en jämn smet.</li>
+            <li>Tillsätt vetemjöl, lite i taget, och fortsätt röra tills det blir stora smulor.</li>
+            <li>Dela degen i två lika stora delar.</li>
+            <li>Arbeta in kakaon i den ena delen och vaniljsocker i den andra så att du får en ljus och en mörk deg.</li>
+            <li>Dela degarna dem i två delar så du får två ljusa och två mörka delar.</li>
+            <li>Rulla ut till längder och tryck till dem mot bakbordet så längderna får platta kanter. Lägg dem tätt ihop, med två ovanpå de andra så de bildar ett litet schackmönster.</li>
+            <li>Låt vila i kylen 1-2 timmar.</li>
+            <li>Sätt ugnen på 200 °C.</li>
+            <li>Ta fram längden och skär ca 3-4 mm tjocka skivor.</li>
+            <li>Lägg kakorna på en plåt med bakplåtspapper och grädda mitt i ugnen i ca 8-10 minuter.</li>
+        </ol>
+    </div>
+    </div>
+    </div>
+</section>
+   
+
+<section id="chokladkakor">
+    <h2>Chokladkakor</h2>   <!--Chatgpt-->
+
+    <div class="recept-layout">
+    <figure>
+        <img
+            src="assets/images/7kakorbilder/Chokladbild.jpg"
+            alt="Tallrik av chokladkakor, AI-genererad."
+            title="Tallrik av chokladkakor, AI-genererad.">
+    </figure>
+
+    <div class="recept-info">
+    <div class="info"> 
+        <p>Chokladkakor är spröda och lite sega kakor med härlig chokladsmak. Perfekta till kaffet eller när du vill bjuda på något riktigt gott.</p>
+
+    <div class="antal">
+    <h3>Ca 40 kakor</h3>
+    </div>
+    </div>
+
+    <div class="ingredienser">
+    <h3>Ingredienser</h3>
+        <ul>
+            <li>150 g smör</li>
+            <li>1 dl strösocker</li>
+            <li>1 ägg</li>
+            <li>3 dl vetemjöl</li>
+            <li>1 tsk bakpulver</li>
+            <li>2 msk kakao</li>
+            <li>100 g mörk choklad</li>
+        </ul>
+    </div>
+
+    <div class="görsåhär">
+    <h3>Gör så här</h3>
+        <ol>
+            <li>Sätt ugnen på 175 °C.</li>
+            <li>Rör smör och socker mjukt i en bunke. Tillsätt ägget och blanda väl.</li>
+            <li>Blanda mjöl, bakpulver och kakao i en separat bunke. Rör ner blandningen i smeten.</li>
+            <li>Vänd försiktigt ner den hackade chokladen.</li>
+            <li>Forma små bollar av degen och lägg dem på en plåt med bakplåtspapper. Platta till dem lite.</li>
+            <li>Grädda mitt i ugnen i cirka 10-12 minuter.</li>
+            <li>Låt kakorna svalna på plåten innan du flyttar dem.</li>
+        </ol>
+    </div>
+    </div>
+    </div>
+</section>
+   
+
+<section id="kardemummakakor">
+    <h2>Kardemummakakor</h2> <!--Chatgpt-->
+
+    <div class="recept-layout">
+    <figure>
+        <img
+            src="assets/images/7kakorbilder/Kardemummabild.jpg"
+            alt="Tallrik av kardemummakakor, AI-genererad."
+            title="Tallrik av kardemummakakor, AI-genererad.">
+    </figure>
+
+    <div class="recept-info">
+    <div class="info"> 
+        <p>Kardemummakakor är spröda, smöriga småkakor med en mild och aromatisk smak av kardemumma. En klassisk fikakaka som passar året om!</p>
+
+    <div class="antal">
+    <h3>Ca 50 kakor</h3>
+    </div>
+    </div>
+
+    <div class="ingredienser">
+    <h3>Ingredienser</h3>
+        <ul>
+            <li>200 g smör</li>
+            <li>1 dl strösocker</li>
+            <li>4 dl vetemjöl</li>
+            <li>1 tsk bakpulver</li>
+            <li>2 tsk malen kardemumma</li>
+            <li>1 tsk vaniljsocker</li>
+        </ul>
+    </div>
+
+    <div class="görsåhär">
+    <h3>Gör så här</h3>
+        <ol>
+            <li>Sätt ugnen på 175 °C.</li>
+            <li>Rör smör och socker mjukt i en bunke.</li>
+            <li>Rör smör och socker mjukt i en bunke.</li>
+            <li>Arbeta ner de torra ingredienserna i smörblandningen tills du får en jämn deg.</li>
+            <li>Rulla degen till små bollar och lägg dem på en plåt med bakplåtspapper. Tryck till varje boll lätt med en gaffel.</li>
+            <li>Grädda mitt i ugnen i cirka 10-12 minuter, tills kakorna fått lite färg.</li>
+            <li>Låt kakorna svalna på plåten.</li>
+        </ol>
+    </div>
+    </div>
+    </div>
+</section>
+
+     <footer>
+    <a href="#kakor">Tillbaka till toppen</a>
+     </footer>
+    <!--footer skapar en sidfot-->
+</body>
 </html>
